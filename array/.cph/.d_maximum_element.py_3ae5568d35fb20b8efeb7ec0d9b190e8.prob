@@ -1,0 +1,1 @@
+{"name":"Local: d_maximum_element","url":"d:\\Work\\100xdevs\\DSA with python\\array\\d_maximum_element.py","tests":[{"id":1789674539341,"input":"5\n1 2 4 3 1","output":"4 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\d_maximum_element.py","group":"local","local":true}

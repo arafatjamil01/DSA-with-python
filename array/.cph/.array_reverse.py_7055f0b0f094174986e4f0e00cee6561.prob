@@ -1,0 +1,1 @@
+{"name":"Local: array_reverse","url":"d:\\Work\\100xdevs\\DSA with python\\array\\array_reverse.py","tests":[{"id":1770901441420,"input":"5\n1 2 3 4 5","output":"5 4 3 2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\array_reverse.py","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: minimum_element_and_position","url":"d:\\Work\\100xdevs\\DSA with python\\array\\minimum_element_and_position.py","tests":[{"id":1770902551756,"input":"6\n7 3 4 5 3 10","output":"3 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\minimum_element_and_position.py","group":"local","local":true}

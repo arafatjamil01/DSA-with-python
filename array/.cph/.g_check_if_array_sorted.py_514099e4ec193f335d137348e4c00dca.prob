@@ -1,0 +1,1 @@
+{"name":"Local: g_check_if_array_sorted","url":"d:\\Work\\100xdevs\\DSA with python\\array\\g_check_if_array_sorted.py","tests":[{"id":1789759404386,"input":"5\n1 2 3 4 5","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\g_check_if_array_sorted.py","group":"local","local":true}

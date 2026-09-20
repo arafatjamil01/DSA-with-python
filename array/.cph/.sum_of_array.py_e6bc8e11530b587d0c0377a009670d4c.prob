@@ -1,0 +1,1 @@
+{"name":"Local: sum_of_array","url":"d:\\Work\\100xdevs\\DSA with python\\array\\sum_of_array.py","tests":[{"id":1770901697624,"input":"5\n1 2 3 4 5","output":"15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\sum_of_array.py","group":"local","local":true}

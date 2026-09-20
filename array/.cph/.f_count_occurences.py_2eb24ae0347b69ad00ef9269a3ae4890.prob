@@ -1,0 +1,1 @@
+{"name":"Local: f_count_occurences","url":"d:\\Work\\100xdevs\\DSA with python\\array\\f_count_occurences.py\\","tests":[{"id":1789719292397,"input":"6 3\n1 5 2 3 7 3","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Work\\100xdevs\\DSA with python\\array\\f_count_occurences.py\\","group":"local","local":true}
