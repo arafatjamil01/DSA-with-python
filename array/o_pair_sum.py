@@ -1,27 +1,4 @@
-import sys
-
-# Previous solution (failed on test 10):
-# - when N = 0 it printed nothing and didn't read X, so later tests read the wrong lines
-# - the O(N^2) double loop is too slow in Python for t = 100, N = 1000
-#
-# def solution():
-#     t = int(input())
-#     if t!=0:
-#         for _ in range(t):
-#             n = int(input())
-#             if n!=0:
-#                 nums = list(map(int, input().split()))
-#                 x = int(input())
-#                 # first item + other items of array sum = x
-#                 count = 0
-#                 for i in range(n):
-#                     a = nums[i]
-#
-#                     for j in range(i+1,n):
-#                         if a + nums[j] == x:
-#                             count +=1
-#                 print(count)
-
+import sys 
 
 def solution():
     data = sys.stdin.read().split()
@@ -33,13 +10,40 @@ def solution():
         nums = data[idx:idx + n]; idx += n
         x = int(data[idx]); idx += 1
 
-        # for each number, count how many earlier numbers complete the pair
-        seen = {}
+        # # hashmap for each number, count how many earlier numbers complete the pair
+        # seen = {}
+        # count = 0
+        # for s in nums:
+        #     a = int(s)
+        #     count += seen.get(x - a, 0)
+        #     seen[a] = seen.get(a, 0) + 1
+
+        # sort + two pointers
+        arr = sorted(int(v) for v in nums)
+        left, right = 0, n - 1
         count = 0
-        for s in nums:
-            a = int(s)
-            count += seen.get(x - a, 0)
-            seen[a] = seen.get(a, 0) + 1
+        while left < right:
+            s = arr[left] + arr[right]
+            if s < x:
+                left += 1
+            elif s > x:
+                right -= 1
+            else:
+                if arr[left] == arr[right]:
+                    m = right - left + 1
+                    count += m * (m - 1) // 2
+                    break
+                cl = 1
+                while arr[left + 1] == arr[left]:
+                    cl += 1
+                    left += 1
+                cr = 1
+                while arr[right - 1] == arr[right]:
+                    cr += 1
+                    right -= 1
+                count += cl * cr
+                left += 1
+                right -= 1
         out.append(str(count))
     print("\n".join(out))
 
