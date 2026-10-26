@@ -1,32 +1,32 @@
 # 2 pointer solution
 import sys
 
-input_tokens = sys.stdin.read().split()
+data = sys.stdin.read().split()
 
-test_case_count = int(input_tokens[0])
-token_index = 1
+test_case_count = int(data[0])
+p = 1
 
 for _ in range(test_case_count):
-    array_size = int(input_tokens[token_index])
-    token_index += 1
-    numbers = list(map(int, input_tokens[token_index:token_index + array_size]))
-    token_index += array_size
-    target_sum = int(input_tokens[token_index])
-    token_index += 1
+    array_size = int(data[p])
+    p += 1
+    numbers = list(map(int, data[p:p + array_size]))
+    p += array_size
+    x = int(data[p])
+    p += 1
 
     numbers.sort()
     triplet_count = 0
-    for first_index in range(array_size):
-        # fix numbers[first_index] as the 1st element, search the 2nd+3rd in numbers[first_index+1..array_size-1]
-        left, right = first_index + 1, array_size - 1
+    for i in range(array_size):
+        # fix numbers[i] as the 1st element, search the 2nd+3rd in numbers[i+1..array_size-1]
+        left, right = i + 1, array_size - 1
         while left < right:
-            current_sum = numbers[first_index] + numbers[left] + numbers[right]
-            if current_sum < target_sum:
+            current_sum = numbers[i] + numbers[left] + numbers[right]
+            if current_sum < x:
                 left += 1            # sum too small -> pick a bigger middle value
-            elif current_sum > target_sum:
+            elif current_sum > x:
                 right -= 1           # sum too big -> pick a smaller last value
             else:
-                # current_sum == target_sum: count ALL valid index pairs in left..right (duplicates count!)
+                # current_sum == x: count ALL valid index pairs in left..right (duplicates count!)
                 if numbers[left] == numbers[right]:
                     # whole left..right stretch is one repeated value:
                     # any 2 of these equal_count elements complete the triplet -> C(equal_count, 2)
